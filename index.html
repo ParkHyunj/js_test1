@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+    <head> </head>
+<body>
+    라이트 모드 : <input type="radio" name="mode" value="light">
+    다크 모드 : <input type="radio" name="mode" value="dark">
+    <p>
+    라이트 모드 : <input type="checkbox">
+    다크 모드 : <input type="checkbox" > 
+    </p>
+        
+        <input id="Mode" type="button"class="btn" value="다크모드로 전환" onclick="setting(this);">
+        <h1>라이트/다크모드 전환 예제</h1>
+        <script>
+        function setting(self){
+            var body = document.querySelector('body'); 
+            var btn = document.getElementById('Mode'); 
+            if(self.value === '다크모드로 전환'){ 
+              body.style.backgroundColor = 'black';  
+              body.style.color = 'white';
+              btn.style.backgroundColor = "white"; 
+              btn.style.color = "black"; 
+              self.value = '라이트모드로 전환';
+            } else { 
+              body.style.backgroundColor = 'white';
+              body.style.color = 'black';
+              btn.style.backgroundColor = "black";
+              btn.style.color = "white";
+              self.value = '다크모드로 전환';
+            }
+          }
+        </script>
+    
+    
+</body>
+</html>
+
